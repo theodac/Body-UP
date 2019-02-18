@@ -1,0 +1,31 @@
+
+
+<ion-content class="myview"   padding class="letsstart">
+
+  <ion-img src="/assets/icon/Vraibnologo.png"></ion-img>
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+  <ion-card>
+    <ion-card-title style="text-align: center">Je m'inscris !  </ion-card-title>
+    <ion-item>
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input type="text" name="name" #name="ngForm" [(ngModel)]="users.name"  ></ion-input>
+
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Prénom</ion-label>
+      <ion-input type="text" name="firstname" [(ngModel)]="users.firstname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="text" name="mail" [(ngModel)]="users.mail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="users.password" [disabled]="!form.valid" ></ion-input>
+    </ion-item>
+
+
+  </ion-card>
+    <ion-button type="submit" expand="block"> Valider</ion-button>
+  </form>
+</ion-content>

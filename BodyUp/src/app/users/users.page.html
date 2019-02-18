@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>users</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card-title *ngFor="let user of users">{{user.name}}</ion-card-title>
+  <div class="loader"></div>
+
+</ion-content>

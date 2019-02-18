@@ -1,0 +1,7 @@
+{
+  "name": "BodyUp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
