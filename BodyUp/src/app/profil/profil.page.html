@@ -1,10 +1,35 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Profil</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Profil</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+
+    Calculer mon IMC
+
+
+    <ion-item>
+        <ion-label position="floating">Mon poids</ion-label>
+        <ion-input type="text" [(ngModel)]="poids"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Ma taille (en mètres) </ion-label>
+        <ion-input type="text" name="taille" [(ngModel)]="taille"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" (click)="calculerImc()">Calculer</ion-button>
+
+    <ion-content>
+
+        <ion-label> Votre IMC est de : </ion-label>
+
+        {{ imc }}
+
+        {{ statut }}
+
+    </ion-content>
 
 </ion-content>
 

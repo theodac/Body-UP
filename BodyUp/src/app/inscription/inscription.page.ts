@@ -19,7 +19,7 @@ export class InscriptionPage implements OnInit {
   onSubmit(){
 
    this.users.password =  Md5.init(this.users.password);
-    this.user.createCustomer(this.users);
+   this.user.createCustomer(this.users);
   }
 
 
