@@ -8,7 +8,7 @@ import {ApiService} from "../api.service";
   styleUrls: ['./users.page.scss'],
 })
 export class UsersPage implements OnInit {
-  public users : Array<any>;
+  public users: Array<any>;
 
   constructor(private user: UserService) { }
 
@@ -21,7 +21,7 @@ export class UsersPage implements OnInit {
       console.log(performance.now());
 
 
-    },);
+    }, );
 
   }
 

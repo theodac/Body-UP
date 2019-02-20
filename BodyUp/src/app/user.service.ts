@@ -10,7 +10,7 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public createCustomer(content){
+  public createCustomer(content) {
     return this.httpClient.post(`${this.apiURL}/users`,content).subscribe(data => {
       console.log(data);
     },
@@ -20,13 +20,16 @@ export class UserService {
 
   }
 
-  public updateCustomer(customer: Users){}
 
-  public deleteCustomer(id: number){}
+  public updateCustomer(customer: Users) {}
 
-  public getCustomerById(id: number){}
+  public deleteCustomer(id: number) {}
 
-  public getCustomers(url?: string){
-    return this.httpClient.get<Users[]>(`${this.apiURL}/`+url);
+  public getCustomerById(id: number) {}
+
+
+
+  public getCustomers(url?: string) {
+    return this.httpClient.get<Users[]>(`${this.apiURL}/` + url);
   }
 }

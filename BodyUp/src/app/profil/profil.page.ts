@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from "../user.service";
+import {ApiService} from "../api.service";
 
 @Component({
   selector: 'app-profil',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilPage implements OnInit {
 
-  constructor() { }
-
+  public  users:  Array<object> = [];
+  constructor(private  user:  UserService) { }
   ngOnInit() {
+    this.getCustomers();
+  }
+  public  getCustomers() {
+    this.user.getCustomers().subscribe((data:  Array<object>) => {
+      this.users  =  data['hydra:member'];
+      console.log(data['hydra:member']);
+    });
   }
 
 }
