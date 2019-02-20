@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'social', loadChildren: './social/social.module#SocialPageModule' },
   { path: 'profil', loadChildren: './profil/profil.module#ProfilPageModule' },
   { path: 'tab4', loadChildren: './tab4/tab4.module#Tab4PageModule' },
+  { path: 'connexion', loadChildren: './connexion/connexion.module#ConnexionPageModule' },
 
 ];
 @NgModule({

@@ -5,24 +5,25 @@
 <ion-content class="myview"   padding class="letsstart">
 
   <ion-img src="/assets/icon/Vraibnologo.png"></ion-img>
+    <form  [formGroup]="register" (ngSubmit)="onSubmit()">
   <ion-card>
     <ion-card-title style="text-align: center">Je me connecte </ion-card-title>
     <ion-item>
       <ion-label position="floating">E-mail</ion-label>
-      <ion-input></ion-input>
+      <ion-input type="text" formControlName="username"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Mot de passe</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
 
 
   </ion-card>
 
-  <ion-button expand="block" href="accueil" fill="clear">Connexion <ion-icon name="checkbox-outline"></ion-icon> </ion-button>
+  <ion-button expand="block" type="submit" fill="clear" [disabled]="!register.valid">Connexion <ion-icon name="checkbox-outline"></ion-icon> </ion-button>
 
 
 
-
+  </form>
 
 </ion-content>
