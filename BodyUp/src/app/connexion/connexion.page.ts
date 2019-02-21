@@ -26,11 +26,10 @@ export class ConnexionPage implements OnInit {
 
   ngOnInit() {
 
-   console.log( this.getDecodedAccessToken(localStorage.getItem('token')));
+   console.log( this.user.getDecodedAccessToken(localStorage.getItem('token')));
 
   }
   onSubmit(){
-    console.log(this.register.value);
     this.user.connexion(this.register.value);
 
   }

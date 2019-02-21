@@ -4,7 +4,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding *ngIf="users != null">
+  <ion-card-title>{{users.name}}</ion-card-title>
 
 </ion-content>
 

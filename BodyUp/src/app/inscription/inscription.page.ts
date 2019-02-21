@@ -28,7 +28,7 @@ export class InscriptionPage implements OnInit {
 
     }
     ngOnInit() {
-        console.log( this.getDecodedAccessToken(localStorage.getItem('token')));
+        console.log( this.user.getDecodedAccessToken(localStorage.getItem('token')));
     }
 
     // convenience getter for easy access to form fields
@@ -38,14 +38,7 @@ export class InscriptionPage implements OnInit {
    console.log(this.register.value);
     this.user.createCustomer(this.register.value);
   }
-    getDecodedAccessToken(token: string): any {
-        try{
-            return jwt_decode(token);
-        }
-        catch(Error){
-            return null;
-        }
-    }
+
 
 
 

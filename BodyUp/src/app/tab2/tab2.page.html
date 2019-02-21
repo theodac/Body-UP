@@ -3,12 +3,21 @@
 <ion-content>
 
   <ion-img src="/assets/icon/Vraibnologo.png"></ion-img>
-  <ion-card>
-    <ion-card-title style="text-align: center">Objectif :</ion-card-title>
-    <ion-button expand="block" href="/tabs/tab3" fill="clear">Etre en forme</ion-button>
-    <ion-button expand="block" href="/tabs/tab3" fill="clear" >Perdre du poid</ion-button>
-    <ion-button expand="block" href="/tabs/tab3" fill="clear" >Se muscler</ion-button>
-  </ion-card>
+  <form [formGroup]="register" (ngSubmit)="" )>
+    <ion-card>
+      <ion-card-title style="text-align: center">Objectif :</ion-card-title>
+      <ion-item>
+        <ion-select placeholder="Select One" formControlName="objectif">
+          <ion-select-option value="healthy">Etre en forme !</ion-select-option>
+          <ion-select-option value="weight">Perdre du poids</ion-select-option>
+          <ion-select-option value="muscular">Se muscler</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-button expand="block" type="submit" fill="clear" [disabled]="!register.valid">Continuez <ion-icon name="checkbox-outline"></ion-icon> </ion-button>
+
+  </form>
+
 
 </ion-content>
 

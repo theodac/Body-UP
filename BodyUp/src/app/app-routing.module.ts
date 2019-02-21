@@ -12,6 +12,8 @@ const routes: Routes = [
   { path: 'profil', loadChildren: './profil/profil.module#ProfilPageModule' },
   { path: 'tab4', loadChildren: './tab4/tab4.module#Tab4PageModule' },
   { path: 'connexion', loadChildren: './connexion/connexion.module#ConnexionPageModule' },
+  { path: 'recipe', loadChildren: './recipe/recipe.module#RecipePageModule' },
+  { path: 'list-recipe', loadChildren: './list-recipe/list-recipe.module#ListRecipePageModule' },
 
 ];
 @NgModule({

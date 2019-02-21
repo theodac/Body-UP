@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>list-recipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let user of users">
+    <ion-img src="/assets/icon/{{user.picture}}"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{user.name}}</ion-card-title>
+      <ion-card-content>
+        {{user.description}}
+      </ion-card-content>
+    </ion-card-header>
+
+    <ion-button expand="block"  href="menus" fill="clear">Je vais voir !<ion-icon name="happy"></ion-icon></ion-button>
+  </ion-card>
+</ion-content>
