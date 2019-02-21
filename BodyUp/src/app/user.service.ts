@@ -12,13 +12,13 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public createCustomer(content) {
+  public createCustomer(content){
     return this.httpClient.post(`${this.apiURL}/users`,content).subscribe(data => {
-      console.log(data);
+          console.log(data);
 
-    },
+        },
         err => {
-        console.log(err);
+          console.log(err);
         });
 
   }
@@ -34,16 +34,13 @@ export class UserService {
 
   }
 
+  public updateCustomer(customer: Users){}
 
-  public updateCustomer(customer: Users) {}
+  public deleteCustomer(id: number){}
 
-  public deleteCustomer(id: number) {}
+  public getCustomerById(id: number){}
 
-  public getCustomerById(id: number) {}
-
-
-
-  public getCustomers(url?: string) {
-    return this.httpClient.get<Users[]>(`${this.apiURL}/` + url);
+  public getCustomers(url?: string){
+    return this.httpClient.get<Users[]>(`${this.apiURL}/`+url);
   }
 }

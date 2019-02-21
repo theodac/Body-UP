@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from "../user.service";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {AuthInterceptor} from "../http-interceptor/auth-interceptor";
-import * as jwt_decode from "jwt-decode";
+import {UserService} from '../user.service';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {AuthInterceptor} from '../http-interceptor/auth-interceptor';
+import * as jwt_decode from 'jwt-decode';
 
 
 @Component({
@@ -13,7 +13,7 @@ import * as jwt_decode from "jwt-decode";
 export class ConnexionPage implements OnInit {
   public users: Array<any>;
   public register: FormGroup;
-  constructor(private user: UserService,private formBuilder: FormBuilder , private interceptor: AuthInterceptor) {
+  constructor(private user: UserService, private formBuilder: FormBuilder , private interceptor: AuthInterceptor) {
     this.register = this.formBuilder.group({
     username: [null, Validators.required],
     password: [null, Validators.required]
