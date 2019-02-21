@@ -11,6 +11,10 @@ export class RecipeService {
   constructor(private httpClient: HttpClient) {
 
   }
+
+  public getRecipeById(id){
+    return this.httpClient.get(`${this.apiURL}/recipes/`+id);
+  }
   public getRecipe(){
     return this.httpClient.get(`${this.apiURL}/recipes`);
   }

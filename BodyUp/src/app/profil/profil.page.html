@@ -5,8 +5,27 @@
 </ion-header>
 
 <ion-content padding *ngIf="users != null">
+  <ion-card class="resume">
+    <ion-card-title class="profil">Vos Informations </ion-card-title>
   <ion-card-title>{{users.name}}</ion-card-title>
+  <ion-card-title>{{users.firstname}}</ion-card-title>
+  </ion-card>
 
+
+
+<ion-row>
+  <ion-col size="6">
+  <ion-card class="content-imc">
+    <ion-card-header >
+      <ion-card-subtitle class="title">Votre indice de Masse corporel </ion-card-subtitle>
+      <ion-card-title class="imc">{{imc}}</ion-card-title>
+      <ion-card-title class="statut">{{statut}}</ion-card-title>
+    </ion-card-header>
+
+
+  </ion-card>
+  </ion-col>
+</ion-row>
 </ion-content>
 
 

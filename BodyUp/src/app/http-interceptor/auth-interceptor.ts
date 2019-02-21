@@ -19,9 +19,8 @@ export class AuthInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
         const token: string = localStorage.getItem('token');
-        console.log(token);
-        if (token) {
-            console.log(token);
+        console.log("Tokent "+token);
+        if (token && !token == null) {
             request = request.clone({ headers: request.headers.set('Authorization', 'Bearer ' + token) });
         }
 
@@ -33,9 +32,9 @@ export class AuthInterceptor implements HttpInterceptor {
         return next.handle(request).pipe(
             map((event: HttpEvent<any>) => {
                 if (event instanceof HttpResponse) {
-                    console.log('event--->>>', event.body['token']);
 
                     localStorage.setItem('token',event.body['token']);
+
                 }
                 return event;
             }));

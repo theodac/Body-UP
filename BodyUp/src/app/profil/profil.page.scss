@@ -19,3 +19,31 @@ ion-header{
 ion-title {
   color: white;
 }
+
+.content-imc{
+  margin-top: 50px;
+}
+.resume{
+  min-height: 100px;
+
+}
+.resume > ion-card-title{
+  line-height: 45px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+.title{
+  text-align: center;
+}
+.imc {
+  color: green;
+  font-size: 24px;
+}
+.statut{
+  font-size: 22px;
+  
+}
+.profil{
+  font-size: 22px;
+  font-weight: bold;
+}

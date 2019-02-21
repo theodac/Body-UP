@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RecipeService} from "../recipe.service";
+import {NavController} from "@ionic/angular";
 
 @Component({
   selector: 'app-list-recipe',
@@ -9,7 +10,7 @@ import {RecipeService} from "../recipe.service";
 export class ListRecipePage implements OnInit {
   public users : any;
 
-  constructor(private recipe: RecipeService) { }
+  constructor(private recipe: RecipeService,private navController: NavController) { }
 
   ngOnInit() {
     this.recipe.getRecipe().subscribe(data => {
@@ -17,5 +18,9 @@ export class ListRecipePage implements OnInit {
       this.users = data;
       console.log(this.users);
     })
+  }
+  link(id : Object){
+    this.navController.navigateForward("recipe/"+id);
+
   }
 }

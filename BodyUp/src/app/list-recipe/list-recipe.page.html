@@ -1,10 +1,9 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>list-recipe</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar>
+  <ion-title>List de Recettes</ion-title>
+</ion-toolbar>
 
-<ion-content padding>
+
+<ion-content padding *ngIf="users != null">
   <ion-card *ngFor="let user of users">
     <ion-img src="/assets/icon/{{user.picture}}"></ion-img>
     <ion-card-header>
@@ -14,6 +13,6 @@
       </ion-card-content>
     </ion-card-header>
 
-    <ion-button expand="block"  href="menus" fill="clear">Je vais voir !<ion-icon name="happy"></ion-icon></ion-button>
+    <ion-button expand="block"  routerLink="/recipe/{{user.id}}" fill="clear">Je vais voir !<ion-icon name="happy"></ion-icon></ion-button>
   </ion-card>
 </ion-content>
